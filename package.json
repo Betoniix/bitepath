@@ -1,0 +1,33 @@
+{
+  "name": "@betoniix/bitepath",
+  "version": "0.1.0",
+  "description": "",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "./dist/"
+  ],
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc -p tsconfig.json",
+    "prepublishOnly ": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Betoniix/bitepath.git"
+  },
+  "author": "Betoniix",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Betoniix/bitepath/issues"
+  },
+  "homepage": "https://github.com/Betoniix/bitepath#readme",
+  "devDependencies": {
+    "@types/jest": "^29.5.3",
+    "jest": "^29.6.1",
+    "pino": "^8.14.1",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.1.6"
+  }
+}
