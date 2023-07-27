@@ -19,4 +19,4 @@ function bitethepaths(name: string = "tsconfig.json") {
   return aliasParser.parse(tsconfig);
 }
 
-export default bitethepaths;
+export { bitethepaths };
