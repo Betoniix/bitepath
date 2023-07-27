@@ -1,7 +1,7 @@
 {
   "name": "@betoniix/bitepath",
-  "version": "0.2.5",
-  "description": "",
+  "version": "0.2.7",
+  "description": "A simple dev tool to solve aliasing for Vite when using TypeScript absolute paths. Plug it in and forget about write again",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
@@ -26,7 +26,6 @@
     "@types/jest": "^29.5.3",
     "@types/node": "^20.4.5",
     "jest": "^29.6.1",
-    "pino": "^8.14.1",
     "ts-jest": "^29.1.1",
     "typescript": "^5.1.6"
   },
