@@ -1,7 +1,7 @@
-import { TsconfigI } from "../../interfaces/tsconfig";
-import { Cleaner } from "../../templates/cleaner";
-import { Parser } from "../../templates/parser";
-import { Reader } from "../../templates/reader";
+import { TsconfigI } from "../../interfaces/tsconfig.js";
+import { Cleaner } from "../../templates/cleaner.js";
+import { Parser } from "../../templates/parser.js";
+import { Reader } from "../../templates/reader.js";
 import { readFileSync, existsSync } from "fs";
 
 export class JsonReader extends Reader<TsconfigI> {
@@ -22,15 +22,16 @@ export class JsonReader extends Reader<TsconfigI> {
 
     const rawstring = readFileSync(path, "utf-8");
     const sanitizedString = this.cleaner.clean(rawstring);
-    const jsonParser = this.parser.parse(sanitizedString);
+    const jsonParsed = this.parser.parse(sanitizedString);
+    const { baseUrl, paths } = jsonParsed.compilerOptions;
 
-    const { baseUrl, paths } = jsonParser;
+    console.log(baseUrl, baseUrl);
 
     if (!baseUrl || !paths)
       throw ReferenceError(
         `Your tsconfig values containts baseUrl: ${baseUrl} and paths: ${paths}. One or both are undefined`
       );
 
-    return jsonParser;
+    return jsonParsed;
   }
 }

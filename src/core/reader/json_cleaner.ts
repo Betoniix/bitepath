@@ -1,5 +1,5 @@
 import stripJsonComments from "strip-json-comments";
-import { Cleaner } from "../../templates/cleaner";
+import { Cleaner } from "../../templates/cleaner.js";
 
 export class JsonCleaner extends Cleaner<string> {
   clean(content: string): string {

@@ -1,5 +1,5 @@
-import { TsconfigI } from "../../interfaces/tsconfig";
-import { Parser } from "../../templates/parser";
+import { TsconfigI } from "../../interfaces/tsconfig.js";
+import { Parser } from "../../templates/parser.js";
 
 export class JsonParser extends Parser<string, TsconfigI> {
   parse(content: string): TsconfigI {

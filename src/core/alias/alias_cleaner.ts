@@ -1,10 +1,10 @@
-import { PathI } from "../../interfaces/path";
-import { TsconfigI } from "../../interfaces/tsconfig";
-import { Cleaner } from "../../templates/cleaner";
+import { PathI } from "../../interfaces/path.js";
+import { TsconfigI } from "../../interfaces/tsconfig.js";
+import { Cleaner } from "../../templates/cleaner.js";
 
 export class AliasCleaner extends Cleaner<TsconfigI> {
   clean(content: TsconfigI): TsconfigI {
-    const { baseUrl, paths } = { ...content };
+    const { baseUrl, paths } = { ...content.compilerOptions };
     const sanitizedPaths: PathI<string[]> = {};
 
     for (const key in paths) {
@@ -15,6 +15,6 @@ export class AliasCleaner extends Cleaner<TsconfigI> {
       sanitizedPaths[cleanedKey] = cleanedPaths;
     }
 
-    return { baseUrl, paths: sanitizedPaths };
+    return { compilerOptions: { baseUrl, paths: sanitizedPaths } };
   }
 }
