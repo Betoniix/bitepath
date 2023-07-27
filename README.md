@@ -28,12 +28,12 @@ First, define your `baseUrl` and `paths` in `tsconfig.json`.
 Then, import `bitethepaths` function in `vite.config.ts`, and set it.
 
 ```typescript
-import bitethepath from "@betoniix/bitepath";
+import { bitethepaths } from "@betoniix/bitepath";
 
 export default defineConfig({
   plugins: [react()],
   resolve: {
-    alias: bitethepath(),
+    alias: bitethepaths(),
   },
 });
 ```
