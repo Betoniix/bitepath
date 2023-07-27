@@ -17,22 +17,3 @@ const jestConfig = {
 };
 
 export default jestConfig;
-
-/* export default {
-  transform: {
-    "^.+\\.tsx?$": [
-      "ts-jest",
-      {
-        useESM: true,
-      },
-    ],
-  },
-
-  globals: {
-    "ts-jest": {
-      useESM: true,
-    },
-  },
-  testEnvironment: "node",
-};
- */
