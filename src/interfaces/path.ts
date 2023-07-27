@@ -1,3 +1,3 @@
-export interface Path<V> {
+export interface PathI<V> {
   [key: string | number]: V;
 }

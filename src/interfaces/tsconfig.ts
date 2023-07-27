@@ -1,6 +1,6 @@
-import { Path } from "./path";
+import { PathI } from "./path";
 
 export interface TsconfigI {
   baseUrl: string;
-  paths: Path<string[]>;
+  paths: PathI<string[]>;
 }

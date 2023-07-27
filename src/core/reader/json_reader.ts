@@ -24,6 +24,13 @@ export class JsonReader extends Reader<TsconfigI> {
     const sanitizedString = this.cleaner.clean(rawstring);
     const jsonParser = this.parser.parse(sanitizedString);
 
+    const { baseUrl, paths } = jsonParser;
+
+    if (!baseUrl || !paths)
+      throw ReferenceError(
+        `Your tsconfig values containts baseUrl: ${baseUrl} and paths: ${paths}. One or both are undefined`
+      );
+
     return jsonParser;
   }
 }
