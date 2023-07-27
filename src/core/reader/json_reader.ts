@@ -25,8 +25,6 @@ export class JsonReader extends Reader<TsconfigI> {
     const jsonParsed = this.parser.parse(sanitizedString);
     const { baseUrl, paths } = jsonParsed.compilerOptions;
 
-    console.log(baseUrl, baseUrl);
-
     if (!baseUrl || !paths)
       throw ReferenceError(
         `Your tsconfig values containts baseUrl: ${baseUrl} and paths: ${paths}. One or both are undefined`
