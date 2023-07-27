@@ -13,8 +13,8 @@ const aliasCleaner = new AliasCleaner();
 const jsonReader = new JsonReader(jsonParser, jsonCleaner);
 const aliasParser = new AliasParser(aliasCleaner);
 
-function bitethepaths() {
-  const tsFilePath = resolve(cwd(), "tsconfig.json");
+function bitethepaths(name: string = "tsconfig.json") {
+  const tsFilePath = resolve(cwd(), name);
   const tsconfig = jsonReader.read(tsFilePath);
   return aliasParser.parse(tsconfig);
 }
