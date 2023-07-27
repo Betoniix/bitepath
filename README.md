@@ -38,11 +38,22 @@ export default defineConfig({
 });
 ```
 
-and that is, you can use your alias free
+and that's it, now you can use your alias freely
 
 # API
+
+### bitethepaths(name)
+
+#### name
+
+`type`: string
+
+`default`: tsconfig.json
+
+It accepts only the name of the configuration file.
 
 # To Do
 
 - Add test for alias feature
+
 - Add test for main function
